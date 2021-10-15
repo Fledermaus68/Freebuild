@@ -1,0 +1,30 @@
+name: Freebuild
+version: ${project.version}
+main: net.fledermaus68.freebuild.Freebuild
+api-version: 1.16
+authors: [ fledi ]
+description: Minecraft Freebuild Plugin
+commands:
+  heal:
+    description: Heile dich oder andere Spieler
+    permission: freebuild.heal
+  feed:
+    description: Sättige dich oder andere Spieler
+    permission: freebuild.feed
+  enderchest:
+    description: Öffne deine Enderchest
+  ec:
+    description: Öffne deine Enderchest
+  kick:
+    description: Kicke einen Spieler
+    permission: freebuild.kick
+  broadcast:
+    description: Broadcast
+    permission: freebuild.broadcast
+  bc:
+    description: Broadcast
+    permission: freebuild.broadcast
+  money:
+    description: Geld-Anzeige
+  pay:
+    description: Geld-Anzeige
