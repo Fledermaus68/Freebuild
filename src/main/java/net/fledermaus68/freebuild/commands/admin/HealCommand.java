@@ -1,4 +1,4 @@
-package net.fledermaus68.freebuild.commands;
+package net.fledermaus68.freebuild.commands.admin;
 
 import net.fledermaus68.freebuild.Freebuild;
 import org.bukkit.Bukkit;

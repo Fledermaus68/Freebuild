@@ -2,6 +2,7 @@ package net.fledermaus68.freebuild.utils;
 
 import Clans.ClanConfiguration;
 import net.fledermaus68.freebuild.Freebuild;
+import net.fledermaus68.freebuild.money.MoneyManager;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.entity.Player;
@@ -39,8 +40,8 @@ public class ScoreboardManager
             objective.setDisplayName("§8» §6Survival Server");
             objective.setDisplaySlot(DisplaySlot.SIDEBAR);
             objective.getScore("§4 ").setScore(10);
-            objective.getScore("§8» §7Level").setScore(9);
-            objective.getScore(updateTeam(scoreboard, "level", "§8➥ §aLevel " + player.getLevel() + "", "§a", ChatColor.RED)).setScore(8);
+            objective.getScore("§8» §7Geld").setScore(9);
+            objective.getScore(updateTeam(scoreboard, "money", "§8➥ §a " + MoneyManager.getMoneyFromUser(player.getUniqueId().toString()) + " Taler", "§a", ChatColor.RED)).setScore(8);
             objective.getScore("§8  ").setScore(7);
             objective.getScore("§8» §7Clan").setScore(6);
             objective.getScore("§8➥ §a" + clanName).setScore(5);
@@ -52,7 +53,7 @@ public class ScoreboardManager
         LocalDateTime now = LocalDateTime.now();
         DateTimeFormatter dtf = DateTimeFormatter.ofPattern("HH:mm:ss");
         Objective objective = scoreboard.getObjective("mysb");
-        objective.getScore(updateTeam(scoreboard, "level", "§8➥ §aLevel " + player.getLevel() + "", "§a", ChatColor.RED)).setScore(8);
+        objective.getScore(updateTeam(scoreboard, "money", "§8➥ §a " + MoneyManager.getMoneyFromUser(player.getUniqueId().toString()) + " Taler", "§a", ChatColor.RED)).setScore(8);
     }
     public static String updateTeam(Scoreboard sb, String Team, String prefix, String suffix, ChatColor entry){
         Team team = sb.getTeam(Team);

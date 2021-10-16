@@ -1,6 +1,8 @@
 package net.fledermaus68.freebuild;
 
 import net.fledermaus68.freebuild.commands.*;
+import net.fledermaus68.freebuild.commands.admin.FeedCommand;
+import net.fledermaus68.freebuild.commands.admin.HealCommand;
 import net.fledermaus68.freebuild.commands.money.MoneyCommand;
 import net.fledermaus68.freebuild.commands.money.PayCommand;
 import net.fledermaus68.freebuild.database.MySQL;
@@ -35,6 +37,7 @@ public final class Freebuild extends JavaPlugin {
         getCommand("bc").setExecutor(new BroadcastCommand());
         getCommand("enderchest").setExecutor(new EnderChestCommand());
         getCommand("ec").setExecutor(new EnderChestCommand());
+        getCommand("krieg").setExecutor(new KriegCommand());
         ScoreboardManager.startScheduler();
 
         try {

@@ -28,3 +28,5 @@ commands:
     description: Geld-Anzeige
   pay:
     description: Geld-Anzeige
+  krieg:
+    description: Kündige einen Krieg an

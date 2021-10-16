@@ -1,4 +1,4 @@
-package net.fledermaus68.freebuild.commands;
+package net.fledermaus68.freebuild.commands.admin;
 
 import net.fledermaus68.freebuild.Freebuild;
 import org.bukkit.Bukkit;
@@ -51,6 +51,7 @@ public class FeedCommand implements CommandExecutor
                 Player targetPlayer = Bukkit.getPlayer(targetName);
                 targetPlayer.setFoodLevel(20);
                 sender.sendMessage(Freebuild.getPrefix() + "§7Du hast §a" + targetPlayer.getDisplayName() + " §7erfolgreich §agesättigt§7.");
+
             }
             else
             {
@@ -58,8 +59,6 @@ public class FeedCommand implements CommandExecutor
                 return false;
             }
         }
-
-
         return false;
     }
 }

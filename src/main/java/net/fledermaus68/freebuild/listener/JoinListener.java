@@ -20,7 +20,6 @@ public class JoinListener implements Listener
         player.sendMessage("§7Deine §aDaten §7wurden §aerfolgreich §7geladen.");
         player.setPlayerListFooter("§ffledi.dev");
         player.setPlayerListHeader("§6Survival Server");
-
         if (!player.hasPlayedBefore()) {
             player.sendMessage("§7Du hast §a20 Taler§7, als §6Startgeld §7erhalten.");
             MoneyManager.createUser(player.getUniqueId().toString());
